@@ -1,5 +1,4 @@
 module.exports = {
-  conf: '/home/master/conf/',
   code: require('../codepacks/codeUtil.js'),
 
   host: function(req){
@@ -21,8 +20,8 @@ module.exports = {
   },
 
   filters: function(req){
-    var blk = require('./block.json'),
-        ste = require('./sites.json'),
+    var blk = require('../conf/block.json'),
+        ste = require('../conf/sites.json'),
         chk = 0;
     for(var i = 0, len = Object.keys(blk.sites).length; i < len; i++){
       if(req === blk.sites[i]){
@@ -54,7 +53,7 @@ module.exports = {
         break;
       case 2: log = 'access';
         break;
-    } file.appendFile(this.conf+'logs/'+log+'.log', (msg + "\n"), function(err){
+    } file.appendFile('../logs/'+log+'.log', (msg + "\n"), function(err){
         if(err) throw err;
         console.log(msg);
       });
