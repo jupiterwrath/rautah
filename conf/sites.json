@@ -1,0 +1,10 @@
+{
+  "sites":{
+    "example.com": {
+      "root": "/path to site 1"
+    },
+    "example.net": {
+      "root": "/path to site 2"
+    }
+  }
+}

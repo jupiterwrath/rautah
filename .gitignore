@@ -27,3 +27,4 @@ build/Release
 node_modules
 /nbproject/private/
 nbprojects/
+*.log
