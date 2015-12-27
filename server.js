@@ -6,8 +6,8 @@ var util = require(appRoot + '/lib/httpUtils');
 var http = require('http');
 var server = http.createServer(util.handleRequest);
 
-var serverListenAddress = config.server.address || 'localhost';
-var serverListenPort = config.server.port || 80;
+var serverListenAddress = config.server.bind.address || 'localhost';
+var serverListenPort = config.server.bind.port || 80;
 
 server.listen(serverListenPort, serverListenAddress, function(){
   console.log(
