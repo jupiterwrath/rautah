@@ -2,10 +2,13 @@ var path = require('path');
 global.appRoot = path.resolve(__dirname);
 
 var config = require(appRoot + '/conf/server');
+var logger = require(appRoot + '/lib/logger');
 var util = require(appRoot + '/lib/httpUtils');
 var http = require('http');
-var server = http.createServer(util.handleRequest);
 
+logger.initialize();
+
+var server = http.createServer(util.handleRequest);
 var serverListenAddress = config.server.bind.address || 'localhost';
 var serverListenPort = config.server.bind.port || 80;
 
