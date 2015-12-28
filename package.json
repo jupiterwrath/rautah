@@ -3,6 +3,7 @@
   "description" : "Simple light-weight nodejs middleware",
   "author" : "Anthony Costabile",
   "dependencies": {
-    "time" : ">= 0.11.4"
+    "time" : ">= 0.11.4",
+    "winston": ">= 2.1.1"
   }
 }

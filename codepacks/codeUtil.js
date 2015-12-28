@@ -1,5 +1,5 @@
 
   module.exports = {
-    util: require('./rawUtils'),
-    test: require('./testUtil')
+    util: require(appRoot + '/codepacks/rawUtils'),
+    test: require(appRoot + '/codepacks/testUtil')
   };
